@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: onstore
+spec:
+  containers:
+  - name: onstore-container
+    image: jadivinith/onstore:1.0
+    ports:
+    - containerPort: 80

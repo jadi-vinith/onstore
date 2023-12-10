@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: onstore-deployment
+  namespace: onstore
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: onstore
+  template:
+    metadata:
+      labels:
+        app: onstore
+    spec:
+      containers:
+      - name: onstore
+        image: jadivinith/onstore:1.0
+        ports:
+        - containerPort: 80
